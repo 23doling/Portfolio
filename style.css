@@ -17,17 +17,17 @@ header {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 120px; /* Width of the profile container */
-    height: 120px; /* Height of the profile container */
-    overflow: hidden; /* Ensures content outside the container is hidden */
-    border-radius: 50%; /* Creates a circular shape */
-    border: 2px solid white; /* Adds a border around the circle */
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
 .profile img {
-    width: 100%; /* Makes the image fully fit the container width */
-    height: 100%; /* Makes the image fully fit the container height */
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 nav {
@@ -94,22 +94,43 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .hobby-list {
-    list-style: none; /* Removes default list bullets */
+    list-style: none;
     padding: 0;
     margin: 1rem 0;
-    text-align: center; /* Aligns the text to the left */
+    text-align: center;
 }
 
 .hobby-list li {
-    margin-bottom: 0.5rem; /* Adds spacing between hobbies */
-    line-height: 1.5; /* Increases readability */
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
 .hobby-list li strong {
-    color: #4CAF50; /* Highlights the hobby name in the theme color */
-    font-weight: bold; /* Ensures bold font for emphasis */
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #f4f4f4;
+    
+}
+
+.education{
+    width: 50%;
+}
+
+.work-ethic {
+    width: 38%;
+    font-style: oblique;
+}
+
+.education h2, .work-ethic h2 {
+    text-align: center;
 }
