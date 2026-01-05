@@ -1,0 +1,37 @@
+.projects {
+  padding: 120px 15vw;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 42px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.08);
+  padding: 28px;
+  border-radius: 18px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.project-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #bcd0e6;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}

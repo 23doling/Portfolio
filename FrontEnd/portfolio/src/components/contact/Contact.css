@@ -1,0 +1,23 @@
+.contact {
+  padding: 120px 15vw;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 42px;
+  color: white;
+}
+
+.contact p {
+  margin: 20px 0 40px;
+  color: #bcd0e6;
+}
+
+.contact-link {
+  background: linear-gradient(135deg, #1da1f2, #00c9ff);
+  padding: 14px 36px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}

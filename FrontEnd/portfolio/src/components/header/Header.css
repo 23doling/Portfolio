@@ -1,0 +1,104 @@
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Use vh/vw for consistent spacing */
+  padding: 3vh 10vw; 
+  background: linear-gradient(90deg, #050d1a, #071a2d);
+  position: fixed; /* Sticky header is usually better for UX */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.logo-icon {
+  /* Size based on viewport to stay proportional */
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 35px; /* Prevent it from getting too tiny */
+  min-height: 35px;
+  background: linear-gradient(135deg, #1da1f2, #00c9ff);
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(14px, 1.5vw, 20px);
+}
+
+.logo-text {
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2vw;
+}
+
+.nav-links a {
+  color: #bcd0e6;
+  text-decoration: none;
+  font-size: clamp(14px, 1.2vw, 16px);
+  transition: 0.2s ease;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #1da1f2, #00c9ff);
+  border: none;
+  padding: 1.2vh 2vw;
+  border-radius: 50px;
+  font-size: clamp(12px, 1.1vw, 16px);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2vh 5vw;
+  }
+
+  /* Hide Nav Links on mobile or stack them */
+  .nav-links {
+    display: none; /* Typically you'd use a hamburger menu here */
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .contact-btn {
+    padding: 1vh 4vw;
+    font-size: 14px;
+  }
+  
+  .right-section {
+    gap: 0;
+  }
+}

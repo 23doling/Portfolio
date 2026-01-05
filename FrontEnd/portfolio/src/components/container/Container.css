@@ -1,0 +1,116 @@
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Uses viewport height for top padding to keep it relative to screen size */
+  padding-top: 8vh; 
+  color: white;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-top: 10vh;
+}
+
+/* Badge */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1vh 2vw;
+  border-radius: 50px;
+  font-size: clamp(12px, 1.2vw, 16px);
+  color: #cdd8e8;
+}
+
+/* Title - Scaled perfectly with viewport width */
+.hero-title {
+  font-size: 8vw; /* Large and responsive */
+  font-weight: 700;
+  margin-top: 10vh;
+  line-height: 1;
+  background: linear-gradient(180deg, #ffffff, #a3b8d0);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 2.5vw;
+  font-weight: 400;
+  color: #bcd0e6;
+  margin-top: 2vh;
+}
+
+.hero-description {
+  /* Takes up 60% of the viewport width on desktop, limited by max-width */
+  width: 70vw;
+  max-width: 800px; 
+  font-size: clamp(16px, 1.5vw, 20px);
+  margin-top: 3vh;
+  color: #a4b7ca;
+  line-height: 1.6;
+  margin-bottom: 5vh;
+}
+
+/* Game Container - Scaling the game based on the narrower viewport dimension */
+.hero-game {
+  width: 90vw;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  margin: 4vh 0;
+}
+
+/* Icons */
+.hero-icons {
+  display: flex;
+  gap: 4vw;
+  margin-top: 5vh;
+  font-size: 3vw;
+  opacity: 0.8;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  margin-top: 5vh;
+  font-size: 4vh;
+  opacity: 0.5;
+  animation: bounce 1.6s infinite;
+}
+
+/* --- Mobile Specific Adaptations --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 12vw; /* Larger text for smaller screens */
+    margin-top: 2vh;
+  }
+
+  .hero-subtitle {
+    font-size: 5vw;
+    margin-top: 1vh;
+  }
+
+  .hero-description {
+    width: 85vw;
+    font-size: 4vw;
+  }
+
+  .hero-icons {
+    font-size: 8vw;
+    gap: 8vw;
+  }
+
+  /* Since the Canvas has a fixed width of 520px/600px in JS, 
+     we scale the whole div to prevent it breaking the 100vw boundary */
+  .hero-game {
+    transform: scale(calc(100vw / 650px)); 
+    transform-origin: center top;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(1.5vh); }
+}
